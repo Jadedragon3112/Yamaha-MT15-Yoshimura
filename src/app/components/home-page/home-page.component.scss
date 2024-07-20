@@ -2,24 +2,32 @@
   #header {
     position: sticky;
     top: 0;
-    padding: 16px 32px;
     background-color: #f0f1f2;
+    z-index: 1000;
 
-    .column {
-      &-left {
-        .logo-yamaha {
-          width: 112px;
-          height: 40px;
-        }
+    #logo-container {
+      padding: 16px 32px;
+
+      .logo-yamaha {
+        width: 112px;
+        height: 40px;
+      }
+    }
+  }
+
+  #main-content {
+    .circle {
+      width: 28px;
+      height: 28px;
+    }
+
+    .circle {
+      &-blue-gray {
+        background: linear-gradient(to right, blue 50%, gray 50%);
       }
 
-      &-right {
-        column-gap: 15px;
-
-        .moto-name {
-          font-weight: 500;
-          font-size: 40px;
-        }
+      &-black-gray {
+        background: linear-gradient(to right, black 50%, gray 50%);
       }
     }
   }

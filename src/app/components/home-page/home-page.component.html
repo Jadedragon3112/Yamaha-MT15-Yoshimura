@@ -1,29 +1,30 @@
-<div id="home-page__wrapper">
+<div id="home-page__wrapper" class="w-100 h-100">
   <!-- header -->
-  <div id="header" class="d-flex justify-content-between align-items-center">
-    <div class="column-left">
+  <div id="header">
+    <div
+      id="logo-container"
+      class="d-flex align-items-center justify-content-center"
+    >
       <img
         class="logo-yamaha"
         src="https://yamaha-motor.com.vn/wp/wp-content/themes/yamaha/assets/img/share/logo.png"
         alt="logo-yamaha"
       />
     </div>
-    <div class="column-right d-flex align-items-center">
-      <div class="moto-name">MT-15</div>
-      <div>
-        <div class="d-flex">
-          <div class="fw-semibold">+2</div>
-          <div class="ms-2">
-            <img
-              src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13' height='13' viewBox='0 0 13 13'%3E%3Cg id='Group_22295' data-name='Group 22295' transform='translate(-251 -112)'%3E%3Ccircle id='Ellipse_338' data-name='Ellipse 338' cx='6.5' cy='6.5' r='6.5' transform='translate(251 112)' fill='%2317a811' opacity='0.2'/%3E%3Ccircle id='Ellipse_339' data-name='Ellipse 339' cx='3.5' cy='3.5' r='3.5' transform='translate(254 115)' fill='%2317a811'/%3E%3C/g%3E%3C/svg%3E"
-              alt="dot-green"
-            />
-          </div>
-        </div>
-        <div class="fw-semibold">Huyên bú đít</div>
+    <!-- moto name -->
+    <div
+      class="d-flex align-items-center justify-content-between px-3 py-2 bg-dark text-white"
+    >
+      <div class="moto-name fw-semibold fs-2">MT-15</div>
+      <div class="d-flex align-items-center">
+        <div class="fw-semibold">2 PHIÊN BẢN KHÁC</div>
+        <span class="material-symbols-outlined ms-2 mt-1">
+          keyboard_arrow_down
+        </span>
       </div>
     </div>
   </div>
+
   <!-- banner -->
   <div>
     <img
@@ -33,9 +34,375 @@
     />
   </div>
   <!-- content -->
-  <div class="row">
-    <div class="col-"></div>
-    <div></div>
-    <div></div>
+  <div id="main-content">
+    <!-- discovery -->
+    <div class="px-3 py-2">
+      <div>
+        <div class="fs-24 fw-semibold mt-2 mb-3">KHÁM PHÁ</div>
+        <img
+          class="w-100"
+          src="https://yamaha-motor.com.vn/wp/wp-content/uploads/2019/09/MT15-GP-004-1-768x645.png"
+          alt=""
+        />
+      </div>
+      <!-- line divide -->
+      <div class="border-bottom border-black w-100 my-3"></div>
+      <!-- moto information -->
+      <div class="fs-24 fw-semibold mb-4">MT-15 ( Phiên bản tiêu chuẩn )</div>
+      <div class="fs-15 mb-4">
+        Giá bán lẻ đề xuất
+        <span class="fw-bold fs-18 ms-1">{{ motoPrice }} VNĐ</span>
+      </div>
+      <!-- moto color -->
+      <div class="fs-15">
+        <div class="text-uppercase">MÀU SẮC: {{ motoColor }}</div>
+        <div class="my-3 d-flex gap-3">
+          <div class="circle circle-blue-gray rounded-circle"></div>
+          <div class="circle circle-black-gray rounded-circle"></div>
+        </div>
+      </div>
+      <!-- moto description -->
+      <div class="fs-15">
+        Yamaha MT-15 có thiết kế ấn tượng mang dáng vóc của "chiến binh" mạnh
+        mẽ, kế thừa tinh hoa của thế hệ trước. Xe sở hữu phuộc trước
+        up-side-down và phuộc monoshock phía sau, động cơ SOHC 155 cc, van biến
+        thiên VVA đi cùng hệ thống làm mát bằng chất lỏng.
+      </div>
+      <!-- line divide -->
+      <div class="border-bottom border-black w-100 my-3"></div>
+      <!-- logo VVA -->
+      <div class="d-flex gap-3 pb-3">
+        <a href="https://yamaha-motor.com.vn/cong-nghe/cong-nghe-vva/">
+          <img
+            style="width: 88px; height: 28px"
+            src="https://yamaha-motor.com.vn/wp/wp-content/uploads/2024/02/vva-logo.png"
+            alt=""
+          />
+        </a>
+        <a href="https://yamaha-motor.com.vn/myyamahamotor/">
+          <img
+            style="width: 28px; height: 28px"
+            src="https://yamaha-motor.com.vn/wp/wp-content/uploads/2024/02/my-yamaha-logo.png"
+            alt=""
+          />
+        </a>
+      </div>
+    </div>
+    <!-- special design -->
+    <div class="border-top">
+      <div class="px-3 py-2">
+        <div class="fs-24 fw-semibold">THIẾT KẾ ĐẶC TRƯNG</div>
+        <!-- content -->
+        <div>
+          <img
+            class="w-100"
+            src="https://yamaha-motor.com.vn/wp/wp-content/uploads/2019/09/MT15-Black-005-2.png"
+            alt=""
+          />
+          <div class="fs-16 my-3">
+            MT-15 sở hữu thiết kế ấn tượng mang dáng vóc của "chiến binh" mạnh
+            mẽ
+          </div>
+          <img
+            src="https://yamaha-motor.com.vn/wp/wp-content/uploads/2019/09/MT-15_B8D9_4.png"
+            alt=""
+          />
+          <div class="my-3">
+            <div class="fs-15 fw-semibold mb-2">BÁNH XE TO THỂ THAO</div>
+            <div class="fs-14">
+              Vành xe bằng hợp kim đúc 17 inch cho độ cứng hoàn hảo và giảm
+              thiểu trọng lượng, kết hợp cùng bộ lốp to bản (110/70 - lốp trước
+              và 140/70 - lốp sau), tăng ma sát mang đến cảm giác lái thoải mái
+              và độ tin cậy tối đa khi vào cua.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="px-3 py-2">
+      <div class="accordion" id="accordionExample">
+        <!-- engine parameters -->
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button fw-semibold px-3 bg-secondary bg-opacity-25"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseOne"
+              aria-expanded="true"
+              aria-controls="collapseOne"
+            >
+              ĐỘNG CƠ
+            </button>
+          </h2>
+          <div
+            id="collapseOne"
+            class="accordion-collapse collapse show"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="row m-0">
+              <ng-container
+                *ngFor="let item of engineParameters; index as index"
+              >
+                <!-- key -->
+                <div
+                  [ngClass]="{
+                    'bg-secondary bg-opacity-25': index % 2 != 0,
+                    'col-6 ps-3 pe-2 py-2 fs-13': true
+                  }"
+                >
+                  {{ item.key }}
+                </div>
+                <!-- value -->
+                <div
+                  [ngClass]="{
+                    'bg-secondary bg-opacity-25': index % 2 != 0,
+                    'col-6 p-0 pe-3 py-2 fs-13 fw-semibold': true
+                  }"
+                >
+                  {{ item.value }}
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+        <!-- exhaust system -->
+        <div class="accordion-item my-3">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed fw-semibold px-3 bg-secondary bg-opacity-25"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo"
+              aria-expanded="false"
+              aria-controls="collapseTwo"
+            >
+              HỆ THỐNG ỐNG XẢ
+            </button>
+          </h2>
+          <div
+            id="collapseTwo"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="row m-0">
+              <ng-container
+                *ngFor="let item of exhaustSystemParameters; index as index"
+              >
+                <!-- key -->
+                <div
+                  [ngClass]="{
+                    'bg-secondary bg-opacity-25': index % 2 != 0,
+                    'col-6 ps-3 pe-2 py-2 fs-13': true
+                  }"
+                >
+                  {{ item.key }}
+                </div>
+                <!-- value -->
+                <div
+                  [ngClass]="{
+                    'bg-secondary bg-opacity-25': index % 2 != 0,
+                    'col-6 p-0 pe-3 py-2 fs-13 fw-semibold': true
+                  }"
+                >
+                  {{ item.value }}
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+        <!-- chassis -->
+        <div class="accordion-item my-3">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed fw-semibold px-3 bg-secondary bg-opacity-25"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseThree"
+              aria-expanded="false"
+              aria-controls="collapseThree"
+            >
+              KHUNG XE
+            </button>
+          </h2>
+          <div
+            id="collapseThree"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="row m-0">
+              <ng-container
+                *ngFor="let item of chassisParameters; index as index"
+              >
+                <!-- key -->
+                <div
+                  [ngClass]="{
+                    'bg-secondary bg-opacity-25': index % 2 != 0,
+                    'col-6 ps-3 pe-2 py-2 fs-13': true
+                  }"
+                >
+                  {{ item.key }}
+                </div>
+                <!-- value -->
+                <div
+                  [ngClass]="{
+                    'bg-secondary bg-opacity-25': index % 2 != 0,
+                    'col-6 p-0 pe-3 py-2 fs-13 fw-semibold': true
+                  }"
+                >
+                  {{ item.value }}
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+        <!-- size -->
+        <div class="accordion-item my-3">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed fw-semibold px-3 bg-secondary bg-opacity-25"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFour"
+              aria-expanded="false"
+              aria-controls="collapseFour"
+            >
+              KÍCH THƯỚC
+            </button>
+          </h2>
+          <div
+            id="collapseFour"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="row m-0">
+              <ng-container *ngFor="let item of sizeParameters; index as index">
+                <!-- key -->
+                <div
+                  [ngClass]="{
+                    'bg-secondary bg-opacity-25': index % 2 != 0,
+                    'col-6 ps-3 pe-2 py-2 fs-13': true
+                  }"
+                >
+                  {{ item.key }}
+                </div>
+                <!-- value -->
+                <div
+                  [ngClass]="{
+                    'bg-secondary bg-opacity-25': index % 2 != 0,
+                    'col-6 p-0 pe-3 py-2 fs-13 fw-semibold': true
+                  }"
+                >
+                  {{ item.value }}
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+        <!-- warranty -->
+        <div class="accordion-item my-3">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed fw-semibold px-3 bg-secondary bg-opacity-25"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseFive"
+              aria-expanded="false"
+              aria-controls="collapseFive"
+            >
+              BẢO HÀNH
+            </button>
+          </h2>
+          <div
+            id="collapseFive"
+            class="accordion-collapse collapse"
+            data-bs-parent="#accordionExample"
+          >
+            <div class="row m-0">
+              <ng-container
+                *ngFor="let item of warrantyParameters; index as index"
+              >
+                <!-- key -->
+                <div
+                  [ngClass]="{
+                    'bg-secondary bg-opacity-25': index % 2 != 0,
+                    'col-6 ps-3 pe-2 py-2 fs-13': true
+                  }"
+                >
+                  {{ item.key }}
+                </div>
+                <!-- value -->
+                <div
+                  [ngClass]="{
+                    'bg-secondary bg-opacity-25': index % 2 != 0,
+                    'col-6 p-0 pe-3 py-2 fs-13 fw-semibold': true
+                  }"
+                >
+                  {{ item.value }}
+                </div>
+              </ng-container>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- footer -->
+  <div class="bg-black text-white px-3 py-4">
+    <div class="d-flex align-items-center gap-3">
+      <div class="fs-24 fw-bold">LIÊN HỆ</div>
+      <div class="fs-11">Hãy luôn giữ liên lạc với chúng tôi !</div>
+    </div>
+    <!-- contact -->
+    <div class="d-flex gap-5 my-3">
+      <div>
+        <a
+          class="text-white d-flex gap-3 border-0 text-decoration-none"
+          href="tel:18001588"
+        >
+          <div class="fs-13">
+            TEL.<span class="fs-18 fw-bold">1800-1588</span>
+          </div>
+          <span class="material-symbols-outlined">call</span>
+        </a>
+      </div>
+      <div>
+        <a
+          class="text-white d-flex gap-3 text-decoration-none"
+          href="https://yamaha-motor.com.vn/lien-he/form/"
+        >
+          <div>TO.<span class="fs-18 fw-bold">MAIL</span></div>
+          <span class="material-symbols-outlined"> mail </span>
+        </a>
+      </div>
+    </div>
+    <!-- details -->
+    <div class="border-top pt-4">
+      <div class="fs-12 fw-bold mb-2">CÔNG TY TNHH YAMAHA MOTOR VIỆT NAM</div>
+      <div class="fs-9 mb-3" style="color: #d3d3d3">
+        <div>Số GCNĐKDN: 0100774342</div>
+        <div>Cấp lần đầu: Ngày 22/09/2008</div>
+        <div>Đăng ký thay đổi lần thứ 10: Ngày 27/03/2020</div>
+        <div>Cơ quan cấp: Sở kế hoạch và đầu tư TP Hà Nội</div>
+        <div>
+          Trụ sở chính: Thôn Bình An, Xã Trung Giã, Huyện Sóc Sơn, TP. Hà Nội
+        </div>
+      </div>
+      <div>
+        <img
+          width="120px"
+          height="50px"
+          src="https://yamaha-motor.com.vn/wp/wp-content/themes/yamaha/assets/img/share/logoSaleNoti.png"
+          alt=""
+        />
+      </div>
+      <div
+        class="fs-9 mt-2 d-flex justify-content-center"
+        style="color: #d3d3d3"
+      >
+        © 2023 BẢN QUYỀN THUỘC VỀ YAMAHA MOTOR VIỆT NAM
+      </div>
+    </div>
   </div>
 </div>
