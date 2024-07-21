@@ -14,13 +14,22 @@ interface OptionModels {
   styleUrl: './home-page.component.scss',
 })
 export class HomePageComponent implements OnInit {
+  readonly VERSION = {
+    BASIC: 'BASIC',
+    SPECIAL: 'SPECIAL',
+  };
+  readonly COLOR = {
+    BLUE: 'BLUE',
+    GRAY: 'GRAY',
+  };
   motoPrice: string = '69.000.000';
-  motoColor: string = 'xám đen';
+  motoColor: string = this.COLOR.BLUE;
   engineParameters: OptionModels[] = [];
   chassisParameters: OptionModels[] = [];
   sizeParameters: OptionModels[] = [];
   warrantyParameters: OptionModels[] = [];
   exhaustSystemParameters: OptionModels[] = [];
+  currentVersion: string = 'BASIC'; //basic or special
   ngOnInit(): void {
     this.setValueEngineParameters();
     this.getChassisParams();
@@ -189,5 +198,18 @@ export class HomePageComponent implements OnInit {
           'Ống xả tiêu chuẩn (phiên bản thường) và ống xả thương hiệu Yoshimura (phiên bản đặc biệt)',
       },
     ];
+  }
+
+  changeMotoVersion(version: string) {
+    this.currentVersion = version;
+    if (this.currentVersion === this.VERSION.BASIC) {
+      this.motoPrice = '69.000.000';
+    } else {
+      this.motoPrice = '79.000.000';
+    }
+  }
+
+  changeMotoColorVersion(colorVersion: string) {
+    this.motoColor = colorVersion;
   }
 }

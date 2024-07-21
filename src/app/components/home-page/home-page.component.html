@@ -16,11 +16,26 @@
       class="d-flex align-items-center justify-content-between px-3 py-2 bg-dark text-white"
     >
       <div class="moto-name fw-semibold fs-2">MT-15</div>
-      <div class="d-flex align-items-center">
-        <div class="fw-semibold">2 PHIÊN BẢN KHÁC</div>
-        <span class="material-symbols-outlined ms-2 mt-1">
-          keyboard_arrow_down
-        </span>
+      <div
+        class="d-flex align-items-center dropdown-toggle"
+        data-bs-toggle="dropdown"
+        aria-expanded="false"
+      >
+        <div class="fw-semibold me-2">2 PHIÊN BẢN KHÁC</div>
+        <ul class="dropdown-menu bg-dark bg-opacity-75">
+          <li
+            class="dropdown-item text-white"
+            (click)="changeMotoVersion(VERSION.BASIC)"
+          >
+            Phiên bản tiêu chuẩn
+          </li>
+          <li
+            class="dropdown-item text-white"
+            (click)="changeMotoVersion(VERSION.SPECIAL)"
+          >
+            Phiên bản đặc biệt
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -40,25 +55,70 @@
       <div>
         <div class="fs-24 fw-semibold mt-2 mb-3">KHÁM PHÁ</div>
         <img
+          *ngIf="currentVersion === VERSION.BASIC"
           class="w-100"
-          src="https://yamaha-motor.com.vn/wp/wp-content/uploads/2019/09/MT15-GP-004-1-768x645.png"
+          src="{{
+            motoColor === COLOR.BLUE
+              ? 'https://yamaha-motor.com.vn/wp/wp-content/uploads/2019/09/MT15-GP-004-1-768x645.png'
+              : 'https://yamaha-motor.com.vn/wp/wp-content/uploads/2019/09/MT15-Black-004-1-768x645.png'
+          }}"
+          alt=""
+        />
+        <img
+          class="w-100"
+          *ngIf="currentVersion === VERSION.SPECIAL"
+          src="https://yamaha-motor.com.vn/wp/wp-content/uploads/2019/09/MT15-Black-004-1-768x645.png"
           alt=""
         />
       </div>
       <!-- line divide -->
       <div class="border-bottom border-black w-100 my-3"></div>
       <!-- moto information -->
-      <div class="fs-24 fw-semibold mb-4">MT-15 ( Phiên bản tiêu chuẩn )</div>
+      <div class="fs-24 fw-semibold mb-4">
+        MT-15
+        <span class="fs-18">{{
+          currentVersion === VERSION.BASIC
+            ? "(Phiên bản tiêu chuẩn)"
+            : "(Phiên bản đặc biệt)"
+        }}</span>
+      </div>
       <div class="fs-15 mb-4">
         Giá bán lẻ đề xuất
         <span class="fw-bold fs-18 ms-1">{{ motoPrice }} VNĐ</span>
       </div>
       <!-- moto color -->
-      <div class="fs-15">
-        <div class="text-uppercase">MÀU SẮC: {{ motoColor }}</div>
+      <div class="fs-15" *ngIf="currentVersion === VERSION.BASIC">
+        <div class="text-uppercase">
+          MÀU SẮC: {{ motoColor === COLOR.BLUE ? "XANH XÁM" : "XÁM ĐEN" }}
+        </div>
         <div class="my-3 d-flex gap-3">
-          <div class="circle circle-blue-gray rounded-circle"></div>
-          <div class="circle circle-black-gray rounded-circle"></div>
+          <div
+            (click)="changeMotoColorVersion(COLOR.BLUE)"
+            [ngClass]="{
+              'rounded-circle p-1': true,
+              'border border-primary': motoColor === COLOR.BLUE
+            }"
+          >
+            <div class="circle circle-blue-gray rounded-circle"></div>
+          </div>
+          <div
+            (click)="changeMotoColorVersion(COLOR.GRAY)"
+            [ngClass]="{
+              'rounded-circle p-1': true,
+              'border border-primary': motoColor === COLOR.GRAY
+            }"
+          >
+            <div class="circle circle-black-gray rounded-circle"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="fs-15" *ngIf="currentVersion === VERSION.SPECIAL">
+        <div class="text-uppercase">MÀU SẮC: XÁM ĐEN</div>
+        <div class="my-3 d-flex gap-3">
+          <div class="rounded-circle border border-primary p-1">
+            <div class="circle circle-black-gray rounded-circle"></div>
+          </div>
         </div>
       </div>
       <!-- moto description -->
@@ -104,6 +164,7 @@
             mẽ
           </div>
           <img
+            class="w-100"
             src="https://yamaha-motor.com.vn/wp/wp-content/uploads/2019/09/MT-15_B8D9_4.png"
             alt=""
           />
@@ -114,6 +175,28 @@
               thiểu trọng lượng, kết hợp cùng bộ lốp to bản (110/70 - lốp trước
               và 140/70 - lốp sau), tăng ma sát mang đến cảm giác lái thoải mái
               và độ tin cậy tối đa khi vào cua.
+            </div>
+          </div>
+          <!-- yoshimura exhaust -->
+          <div class="my-3">
+            <img
+              class="w-100"
+              src="assets/images/yoshimura-exhaust.jpg"
+              alt=""
+            />
+            <div class="fs-15 fw-semibold mb-2 mt-3 text-uppercase">
+              Hệ thống ống xả
+            </div>
+            <div class="mb-1 fs-14">
+              Hệ thống ống xả kết hợp với thương hiệu
+              <span class="fw-semibold">Yoshimura (phiên bản đặc biệt)</span>
+              mang lại ngoại hình xe cá tính và bắt mắt hơn. Ở phiên bản này đã
+              được tinh chỉnh tiếng ồn, cũng như hệ thống khí xả phù hợp với yêu
+              cầu của từng thị trường.
+            </div>
+            <div class="fst-italic fs-12 text-danger">
+              * Chú ý: Đối với phiên bản đặc biệt có đi kèm với bộ phận giảm
+              thanh.
             </div>
           </div>
         </div>
